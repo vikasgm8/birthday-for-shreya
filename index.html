@@ -1,89 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Happy Birthday ❤️</title>
-
-<link rel="stylesheet" href="style.css">
+<title>Cherry 🍒 | Happy Birthday Shreya</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <div id="loader">
 
-<div class="loader-heart"></div>
+<div class="loader-box">
 
-<h2>Preparing Something Special...</h2>
+<div class="loader-heart">🤍</div>
 
-<p>Only for Shreya ❤️</p>
+<h1>Preparing Something Beautiful...</h1>
+
+<p>Please wait a moment...</p>
 
 </div>
 
-<div id="app" class="hidden">
+</div>
 
-<section class="landing">
+<div id="website" class="hidden">
 
-<div class="stars"></div>
+<section id="welcome" class="page active">
 
-<div class="glass">
+<div class="floating"></div>
+
+<div class="card">
+
+<div class="teddy">
+🧸
+</div>
 
 <h1>Happy Birthday</h1>
 
-<h2>Shreya ❤️</h2>
+<h2>Shreya 🤍</h2>
 
 <p>
 
-Some gifts are bought...
+A little surprise made with lots of love...
 
-Some gifts are made with love.
-
-This one was made only for you.
+I hope this journey makes you smile.
 
 </p>
 
-<button id="beginBtn">
+<button id="startJourney">
 
-Begin The Journey ✨
+Begin ✨
 
 </button>
 
 </div>
 
 </section>
-<section id="passwordPage" class="hidden">
 
-<div class="glass password-card">
+<section id="passwordPage" class="page">
 
-<h2>🔐 Secret Access</h2>
+<div class="card">
+
+<h2>Password 🔐</h2>
 
 <p>
 
-Only the birthday girl knows the password.
-
-Enter it below to unlock your surprise.
+Enter the password to continue.
 
 </p>
 
 <input
+
+id="password"
+
 type="password"
-id="passwordInput"
-placeholder="Enter Password">
 
-<button id="unlockBtn">
+placeholder="Password">
 
-Unlock ❤️
+<button id="unlock">
+
+Open My Surprise 🤍
 
 </button>
 
@@ -92,47 +94,55 @@ Unlock ❤️
 </div>
 
 </section>
+<section id="unlockPage" class="page">
 
-<section id="envelopePage" class="hidden">
+<div class="card">
+
+<div class="sparkles">✨ 🌸 ✨</div>
+
+<h1>Welcome 🤍</h1>
+
+<p>
+
+Password accepted successfully.
+
+Now let me show you something made especially for you...
+
+</p>
+
+<button id="continueJourney">
+
+Continue 🌸
+
+</button>
+
+</div>
+
+</section>
+
+<section id="envelopePage" class="page">
 
 <div class="envelope-container">
 
 <div class="envelope">
 
-<div class="letter">
+<div class="heart-seal">
+🤍
+</div>
 
-<h2>💌</h2>
+</div>
+
+<h2>A Letter For You 💌</h2>
 
 <p>
 
-Tap below to open my letter...
+Some words are better felt than spoken.
 
 </p>
-
-</div>
-
-</div>
 
 <button id="openLetter">
 
-Open Letter ❤️
-
-</button>
-
-</div>
-
-</section>
-<section id="letterPage" class="hidden">
-
-<div class="glass letter-card">
-
-<h1>To My Dearest Shreya ❤️</h1>
-
-<div id="typedLetter"></div>
-
-<button id="photoBtn">
-
-Our Memories 📸
+Open Letter ✨
 
 </button>
 
@@ -140,64 +150,133 @@ Our Memories 📸
 
 </section>
 
-<section id="galleryPage" class="hidden">
+<section id="letterPage" class="page">
 
-<h1>Our Beautiful Memories ❤️</h1>
+<div class="letter-card">
 
-<div class="gallery">
+<h1>My Letter 🤍</h1>
 
-<div class="photo-frame"><img src="images/1.jpg" alt=""></div>
+<div id="letterText">
 
-<div class="photo-frame"><img src="images/2.jpg" alt=""></div>
-
-<div class="photo-frame"><img src="images/3.jpg" alt=""></div>
-
-<div class="photo-frame"><img src="images/4.jpg" alt=""></div>
-
-<div class="photo-frame"><img src="images/5.jpg" alt=""></div>
-
-<div class="photo-frame"><img src="images/6.jpg" alt=""></div>
+<!-- Your letter will appear here -->
 
 </div>
 
-<button id="finalBtn">
+<button id="letterNext">
 
-One Last Surprise 🎁
+Continue To Memories 📸
 
 </button>
 
+</div>
+
 </section>
 
-<section id="endingPage" class="hidden">
+<section id="memoryIntro" class="page">
 
-<div class="glass">
+<div class="card">
 
-<h1>Happy Birthday ❤️</h1>
+<h1>Our Story 🌸</h1>
 
 <p>
 
-No matter where life takes us...
+Every picture has a memory.
 
-You'll always have a special place in my heart.
+Every memory has a feeling.
 
-I hope today brings you endless smiles, happiness, and beautiful memories.
-
-Thank you for being you.
-
-❤️
+And every feeling reminds me of you.
 
 </p>
 
-<h2>Forever Yours,<br>Vikas</h2>
+<button id="startMemories">
+
+Start Journey 🤍
+
+</button>
+
+</div>
+
+</section>
+<!-- MEMORY 1 -->
+
+<section id="memory1" class="page">
+
+<div class="memory-card">
+
+<div class="progress">Memory 1 / 10 🤍</div>
+
+<div class="photo-frame">
+<img src="images/1.jpg" alt="Memory 1">
+</div>
+
+<h2 id="title1">
+The Beginning ❤️
+</h2>
+
+<p id="desc1">
+Write your memory here...
+</p>
+
+<button id="next1">
+Next Memory 🌸
+</button>
 
 </div>
 
 </section>
 
+<!-- MEMORY 2 -->
+
+<section id="memory2" class="page">
+
+<div class="memory-card">
+
+<div class="progress">Memory 2 / 10 🤍</div>
+
+<div class="photo-frame ribbon">
+<img src="images/2.jpg" alt="Memory 2">
 </div>
 
-<script src="script.js"></script>
+<h2 id="title2">
+Our Beautiful Moment ✨
+</h2>
 
-</body>
+<p id="desc2">
+Write your memory here...
+</p>
 
-</html>
+<button id="next2">
+Next Memory 🌷
+</button>
+
+</div>
+
+</section>
+
+<!-- MEMORY 3 -->
+
+<section id="memory3" class="page">
+
+<div class="memory-card scrapbook">
+
+<div class="progress">Memory 3 / 10 🤍</div>
+
+<div class="photo-frame">
+<img src="images/3.jpg" alt="Memory 3">
+</div>
+
+<h2 id="title3">
+A Memory I'll Never Forget 🌸
+</h2>
+
+<p id="desc3">
+Write your memory here...
+</p>
+
+<button id="next3">
+Continue 🤍
+</button>
+
+</div>
+
+</section>
