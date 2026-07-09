@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Happy Birthday ❤️</title>
@@ -9,9 +12,10 @@
 <link rel="stylesheet" href="style.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
 </head>
 
@@ -21,142 +25,170 @@
 
 <div class="loader-heart"></div>
 
-<h2>Preparing Your Surprise...</h2>
+<h2>Preparing Something Special...</h2>
 
-<p>Please wait...</p>
+<p>Only for Shreya ❤️</p>
 
 </div>
 
-<div id="mainWebsite" class="hidden">
+<div id="app" class="hidden">
 
-<section class="hero">
+<section class="landing">
 
-<div class="overlay"></div>
+<div class="stars"></div>
 
-<div class="hero-content">
+<div class="glass">
 
 <h1>Happy Birthday</h1>
 
-<h2>My Beautiful Shreya ❤️</h2>
-
-<p>
-Today isn't just another day...
-it's the day my favourite person came into this world.
-</p>
-
-<button id="startBtn">
-
-Open Your Surprise 🎁
-
-</button>
-
-</div>
-
-</section>
-<section id="story" class="hidden">
-
-<div class="story-card">
-
-<h2>Before You Continue...</h2>
+<h2>Shreya ❤️</h2>
 
 <p>
 
-I wanted to buy you the biggest gift.
+Some gifts are bought...
 
-But then I realised...
+Some gifts are made with love.
 
-No gift could ever tell you how much you mean to me.
-
-So...
-
-I made something with my own heart.
-
-Every page after this was created only for you.
-
-I hope this little surprise makes you smile today.
+This one was made only for you.
 
 </p>
 
-<button id="continueBtn">
+<button id="beginBtn">
 
-Continue ❤️
-
-</button>
-
-</div>
-
-</section>
-
-<section id="gallery" class="hidden">
-
-<h2>Our Beautiful Memories 📸</h2>
-
-<div class="gallery-grid">
-
-<div class="photo photo1"></div>
-
-<div class="photo photo2"></div>
-
-<div class="photo photo3"></div>
-
-<div class="photo photo4"></div>
-
-<div class="photo photo5"></div>
-
-<div class="photo photo6"></div>
-
-</div>
-
-<button id="nextLetter">
-
-Read My Letter 💌
-
-</button>
-
-</section>
-<section id="letter" class="hidden">
-
-<div class="letter-box">
-
-<h1>💌 A Letter From My Heart</h1>
-
-<p id="letterText">
-
-</p>
-
-<button id="memoryBtn">
-
-One More Surprise ❤️
+Begin The Journey ✨
 
 </button>
 
 </div>
 
 </section>
+<section id="passwordPage" class="hidden">
 
-<section id="final" class="hidden">
+<div class="glass password-card">
 
-<h1>Happy Birthday Once Again ❤️</h1>
+<h2>🔐 Secret Access</h2>
 
 <p>
 
-Thank you for coming into my life.
+Only the birthday girl knows the password.
 
-No matter where life takes us,
+Enter it below to unlock your surprise.
 
-you'll always be one of the most beautiful parts of my heart.
+</p>
 
-I love you endlessly.
+<input
+type="password"
+id="passwordInput"
+placeholder="Enter Password">
+
+<button id="unlockBtn">
+
+Unlock ❤️
+
+</button>
+
+<p id="wrongPassword"></p>
+
+</div>
+
+</section>
+
+<section id="envelopePage" class="hidden">
+
+<div class="envelope-container">
+
+<div class="envelope">
+
+<div class="letter">
+
+<h2>💌</h2>
+
+<p>
+
+Tap below to open my letter...
+
+</p>
+
+</div>
+
+</div>
+
+<button id="openLetter">
+
+Open Letter ❤️
+
+</button>
+
+</div>
+
+</section>
+<section id="letterPage" class="hidden">
+
+<div class="glass letter-card">
+
+<h1>To My Dearest Shreya ❤️</h1>
+
+<div id="typedLetter"></div>
+
+<button id="photoBtn">
+
+Our Memories 📸
+
+</button>
+
+</div>
+
+</section>
+
+<section id="galleryPage" class="hidden">
+
+<h1>Our Beautiful Memories ❤️</h1>
+
+<div class="gallery">
+
+<div class="photo-frame"><img src="images/1.jpg" alt=""></div>
+
+<div class="photo-frame"><img src="images/2.jpg" alt=""></div>
+
+<div class="photo-frame"><img src="images/3.jpg" alt=""></div>
+
+<div class="photo-frame"><img src="images/4.jpg" alt=""></div>
+
+<div class="photo-frame"><img src="images/5.jpg" alt=""></div>
+
+<div class="photo-frame"><img src="images/6.jpg" alt=""></div>
+
+</div>
+
+<button id="finalBtn">
+
+One Last Surprise 🎁
+
+</button>
+
+</section>
+
+<section id="endingPage" class="hidden">
+
+<div class="glass">
+
+<h1>Happy Birthday ❤️</h1>
+
+<p>
+
+No matter where life takes us...
+
+You'll always have a special place in my heart.
+
+I hope today brings you endless smiles, happiness, and beautiful memories.
+
+Thank you for being you.
 
 ❤️
 
 </p>
 
-<div class="countdown">
-
-<h3>Time Together ⏳</h3>
-
-<div id="timer"></div>
+<h2>Forever Yours,<br>Vikas</h2>
 
 </div>
 
@@ -169,4 +201,3 @@ I love you endlessly.
 </body>
 
 </html>
-
