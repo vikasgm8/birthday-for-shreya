@@ -49,7 +49,7 @@ Happy Birthday, my girl. 🎂🤍
 
 You don't know how special you are to me, Baby. It's your birthday, but I think I'm happier than you are. ❤️ Today, my girl was born—the girl who made my entire life beautiful. I love you so much. Once again, Happy Birthday, Baby. 🫂❤️
 
-Do you remember that day when you corrected my Physics paper and gave me extra marks? 😂❤️ To thank you, I gave you a chewing gum. I still remember that day, and it always makes me smile. Unexpectedly, it became one of the best days of my life.
+Do you remember that day when you corrected my Physics paper and gave me extra marks? and to thank you, I gave you a chewing gum. I still remember that day, and it always makes me smile. Unexpectedly, it became one of the best days of my life.
 
 I know I had a past, about Meha and everything. I'm really sorry for that. But now, I'm all yours, and I promise I'll always stay loyal to you, Baby. ❤️ I want to marry you, Shreya. I'm madly in love with you, and I dream about you every single day. Thank you for everything. 🤍
 
