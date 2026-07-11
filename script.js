@@ -1,191 +1,163 @@
-const loader=document.getElementById("loader");
-const website=document.getElementById("mainWebsite");
+const screens = document.querySelectorAll(".screen");
 
-window.onload=()=>{
+function showScreen(id){
+    screens.forEach(screen=>screen.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
 
-setTimeout(()=>{
+window.addEventListener("load",()=>{
 
-loader.style.display="none";
-website.classList.remove("hidden");
+    setTimeout(()=>{
 
-},1800);
+        document.getElementById("loader").classList.add("hidden");
+        document.getElementById("app").classList.remove("hidden");
 
-};
+    },2500);
 
-const pages={
-
-story:document.getElementById("story"),
-gallery:document.getElementById("gallery"),
-letter:document.getElementById("letter"),
-final:document.getElementById("final")
-
-};
-
-document.getElementById("startBtn").onclick=()=>{
-
-document.querySelector(".hero").style.display="none";
-
-pages.story.classList.remove("hidden");
-
-window.scrollTo({
-top:0,
-behavior:"smooth"
 });
 
-};
+document.getElementById("startBtn").addEventListener("click",()=>{
 
-document.getElementById("continueBtn").onclick=()=>{
+    showScreen("password");
 
-pages.story.style.display="none";
-
-pages.gallery.classList.remove("hidden");
-
-window.scrollTo({
-top:0,
-behavior:"smooth"
 });
 
-};
+document.getElementById("unlockBtn").addEventListener("click",()=>{
 
-document.getElementById("nextLetter").onclick=()=>{
+    const pass=document.getElementById("passwordInput").value.trim().toLowerCase();
 
-pages.gallery.style.display="none";
+    if(pass==="cherry"){
 
-pages.letter.classList.remove("hidden");
+        showScreen("letterIntro");
 
-typeLetter();
+    }else{
 
-window.scrollTo({
-top:0,
-behavior:"smooth"
+        document.getElementById("errorText").innerText="Wrong password 🤍";
+
+    }
+
 });
 
-};
+document.getElementById("openLetterBtn").addEventListener("click",()=>{
 
-document.getElementById("memoryBtn").onclick=()=>{
+    showScreen("letter");
 
-pages.letter.style.display="none";
-
-pages.final.classList.remove("hidden");
-
-window.scrollTo({
-top:0,
-behavior:"smooth"
 });
+const letter=`Hi Cherry 🤍
 
-startTimer();
+This is only a demo.
 
-};
-const message=`Happy Birthday, Shreya ❤️
+Later, we'll write the real letter together.
 
-Today is one of the most special days for me because it's the day the most beautiful person came into this world.
+I want every word here to come from my heart.
 
-Thank you for every smile, every memory, every laugh, and every moment we've shared.
-
-I know this website isn't as valuable as expensive gifts, but every line here was made with love.
-
-I hope this little surprise makes you smile.
-
-Happy Birthday once again.
-
-I wish you endless happiness, success, good health, and countless beautiful memories.
-
-May this year bring you everything your heart dreams of.
-
-❤️ Always Yours,
-Vikas`;
-
-function typeLetter(){
-
-const box=document.getElementById("letterText");
+Love,
+Vikas ❤️`;
 
 let i=0;
 
+function typeLetter(){
+
+const box=document.getElementById("typewriter");
+
+if(!box)return;
+
 box.innerHTML="";
 
-const typing=setInterval(()=>{
+i=0;
 
-box.innerHTML+=message.charAt(i);
+const timer=setInterval(()=>{
+
+box.innerHTML+=letter.charAt(i);
 
 i++;
 
-if(i>=message.length){
+if(i>=letter.length){
 
-clearInterval(typing);
-
-}
-
-},35);
+clearInterval(timer);
 
 }
 
-function startTimer(){
-
-const start=new Date("2025-01-01");
-
-setInterval(()=>{
-
-const now=new Date();
-
-const diff=now-start;
-
-const days=Math.floor(diff/86400000);
-
-const hours=Math.floor((diff%86400000)/3600000);
-
-const mins=Math.floor((diff%3600000)/60000);
-
-const secs=Math.floor((diff%60000)/1000);
-
-document.getElementById("timer").innerHTML=
-
-days+" Days ❤️ "+hours+" Hours ❤️ "+mins+" Minutes ❤️ "+secs+" Seconds";
-
-},1000);
-
-}
-document.querySelectorAll(".photo").forEach((photo,index)=>{
-
-photo.addEventListener("click",()=>{
-
-photo.style.transform="scale(1.12)";
-
-setTimeout(()=>{
-
-photo.style.transform="scale(1)";
-
-},250);
-
-});
-
-});
-
-window.addEventListener("scroll",()=>{
-
-document.querySelectorAll("section").forEach(sec=>{
-
-const top=sec.getBoundingClientRect().top;
-
-if(top<window.innerHeight-120){
-
-sec.style.opacity="1";
-
-sec.style.transform="translateY(0)";
+},40);
 
 }
 
-});
+document.getElementById("openLetterBtn").addEventListener("click",()=>{
+
+setTimeout(typeLetter,300);
 
 });
+document.getElementById("memoryBtn").addEventListener("click", () => {
+    showScreen("memory");
+});
+const memories = [
+{
+image:"images/IMG_20260704_133328_799.jpg",
+title: "Our First Meet ❤️",
+text: "Our first photo together."
+},
+{
+image:"images/IMG_20260710_130013.png",
+title: "The Photo Which Changed My Life 🩷",
+text: "Our first day when we entered in relationship."
+},
+{
+image:"images/IMG-20260607-WA0052_1783152248876.jpg",
+title: "Cutest Photo Of All Time 🤍",
+text: "I'm in love with this photo."
+},
+{
+image: "images/IMG_20260710_130214.png",
+title: "Our Second Meet With Your Best Friend 💗",
+text: "This'll be my best memory."
+},
+{
+image:"images/IMG-20260620-WA0006_1783152248627.jpg",
+title: "My Angry Bird 💛",
+text: "A cute photo, I watch and laugh every time."
+},
+{
+image:"images/IMG_20260704_133301_105.jpg",
+title: "This One Is Nearest To My Heart 💟",
+text: "I drew my whole world in my diary."
+}
+];
 
-document.querySelectorAll("section").forEach(sec=>{
+let memoryIndex = 0;
+function loadMemory() {
+document.getElementById("memoryImage").src = memories[memoryIndex].image;
+document.getElementById("memoryTitle").innerText = memories[memoryIndex].title;
+document.getElementById("memoryText").innerText = memories[memoryIndex].text;
+document.getElementById("currentMemory").innerText = memoryIndex + 1;
+}
 
-sec.style.opacity="0";
+loadMemory();
 
-sec.style.transform="translateY(60px)";
+document.getElementById("nextMemoryBtn").addEventListener("click", () => {
 
-sec.style.transition="all .8s ease";
+memoryIndex++;
+
+if (memoryIndex >= memories.length) {
+    showScreen("surprise");
+    return;
+}
+
+loadMemory();
 
 });
+document.getElementById("replayBtn").addEventListener("click", () => {
 
-console.log("Birthday website loaded successfully ❤️");
+memoryIndex = 0;
+loadMemory();
+showScreen("memory");
+
+});
+document.getElementById("promiseBtn").addEventListener("click", () => {
+    showScreen("promise");
+});
+
+document.getElementById("backHomeBtn").addEventListener("click", () => {
+    memoryIndex = 0;
+    loadMemory();
+    showScreen("letterIntro");
+});
