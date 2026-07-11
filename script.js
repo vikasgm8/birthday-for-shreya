@@ -62,6 +62,8 @@ From your man, ❤️
 
 Vikas ❤️
 
+`;
+
 let i=0;
 
 function typeLetter(){
