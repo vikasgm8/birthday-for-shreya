@@ -43,7 +43,8 @@ document.getElementById("openLetterBtn").addEventListener("click",()=>{
     showScreen("letter");
 
 });
-const letter= Hey Shreya... 💌❤️
+const letter = `
+Hey Shreya... 💌❤️
 
 Happy Birthday, my girl. 🎂🤍
 
