@@ -43,16 +43,23 @@ document.getElementById("openLetterBtn").addEventListener("click",()=>{
     showScreen("letter");
 
 });
-const letter=`Hi Cherry 🤍
+const letter= Hey Shreya... 💌❤️
 
-This is only a demo.
+Happy Birthday, my girl. 🎂🤍
 
-Later, we'll write the real letter together.
+You don't know how special you are to me, Baby. It's your birthday, but I think I'm happier than you are. ❤️ Today, my girl was born—the girl who made my entire life beautiful. I love you so much. Once again, Happy Birthday, Baby. 🫂❤️
 
-I want every word here to come from my heart.
+Do you remember that day when you corrected my Physics paper and gave me extra marks? 😂❤️ To thank you, I gave you a chewing gum. I still remember that day, and it always makes me smile. Unexpectedly, it became one of the best days of my life.
 
-Love,
-Vikas ❤️`;
+I know I had a past, about Meha and everything. I'm really sorry for that. But now, I'm all yours, and I promise I'll always stay loyal to you, Baby. ❤️ I want to marry you, Shreya. I'm madly in love with you, and I dream about you every single day. Thank you for everything. 🤍
+
+My everything is you. If it's you, then it's a yes for everything. ❤️ I hope our relationship ends with marriage, two children (our elder one will be a girl and our younger one will be a boy🤭), and the beautiful life we've always dreamed of. Daily hugs, kisses, and growing old together. Even imagining all of that makes me feel shy. 🥹❤️
+
+At the end of this letter, I just want to thank you once again and tell you that I love you so much. One day, I hope we'll become husband and wife, and stay together until we become grandfather and grandmother. ❤️♾️
+
+From your man, ❤️
+
+Vikas ❤️
 
 let i=0;
 
